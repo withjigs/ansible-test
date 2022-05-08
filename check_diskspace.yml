@@ -1,0 +1,12 @@
+- name: Check diskspace
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Run df
+      command: df -h
+      register: df_output
+
+    - name: Print result
+      debug: 
+        msg: df_output.stdout
