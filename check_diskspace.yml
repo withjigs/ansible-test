@@ -9,4 +9,4 @@
 
     - name: Print result
       debug: 
-        msg: df_output.stdout
+        msg: "{{ df_output.stdout }}"
