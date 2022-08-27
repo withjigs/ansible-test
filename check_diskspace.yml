@@ -3,10 +3,6 @@
   become: yes
 
   tasks:
-    - name: Run df
-      command: df -h
-      register: df_output
-
-    - name: Print result
+    - name: print secret
       debug: 
-        msg: "{{ df_output.stdout }}"
+        msg: "{{ lookup('hashi_vault', 'secret=secrets/jigar:pass }}"
