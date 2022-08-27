@@ -1,6 +1,7 @@
 - name: Check diskspace
   hosts: all
   become: yes
+  gather_facts: no
 
   tasks:
     - name: print secret
