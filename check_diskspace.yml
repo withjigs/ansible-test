@@ -6,4 +6,4 @@
   tasks:
     - name: print secret
       debug: 
-        msg: "{{ lookup('hashi_vault', 'secret=secrets/jigar:pass' }}"
+        msg: "{{ lookup('hashi_vault', 'secret=secrets/jigar:pass') }}"
